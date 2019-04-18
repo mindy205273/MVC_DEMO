@@ -11,7 +11,10 @@ namespace Hello_World.Controllers
         // GET: Default
         public ActionResult Index()
         {
-            ViewBag.Label = "Hello World";
+            Models.HelloApplication hello = new Models.HelloApplication();
+
+            //ViewBag.Label = "Hello World";
+            ViewBag.Label = hello.GetLabelText();
             return View();
         }
     }
